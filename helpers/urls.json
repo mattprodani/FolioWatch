@@ -5,7 +5,7 @@
         "positions_data": "https://client.schwab.com/api/PositionV2/PositionsDataV2",
         "order_verification": "https://client.schwab.com/api/ts/stamp/verifyOrder",
         "order_confirmation": "https://client.schwab.com/api/ts/stamp/confirmorder",
-        "watchlist_data": "https://client.schwab.com/trade/watchlist/watchlist.aspx"
+        "watchlist_data": "https://client.schwab.com/trade/watchlist/watchlist.aspx?view=analyst_ratings"
     },
     "sa": {
         "login": "https://seekingalpha.com/account/login"

@@ -1,10 +1,11 @@
 import json
 import urllib.parse
 
-from . import urls
 from .account_information import Position, Account
 from .authentication import SessionManager
+from helpers.urls import URLs
 import pandas as pd
+
 
 class Schwab(SessionManager):
     def __init__(self, **kwargs):
@@ -14,6 +15,7 @@ class Schwab(SessionManager):
         """
         self.headless = kwargs.get("headless", True)
         self.browserType = kwargs.get("browserType", "firefox")
+        self.urls = URLs("schwab")
         super(Schwab, self).__init__()
    
 
@@ -24,7 +26,7 @@ class Schwab(SessionManager):
         """
 
         with self.page.expect_navigation():
-            self.page.goto(urls.watchlist_data())
+            self.page.goto(self.urls.watchlist_data)
         self.page.wait_for_load_state("domcontentloaded")
 
         self.page.wait_for_selector('table')
@@ -38,7 +40,7 @@ class Schwab(SessionManager):
         """
         
         account_info = dict()
-        r = self.session.get(urls.positions_data())
+        r = self.session.get(self.urls.positions_data)
         response = json.loads(r.text)
         for account in response['Accounts']:
             positions = list()
@@ -96,7 +98,7 @@ class Schwab(SessionManager):
             "CostBasis":"FIFO",
             }
 
-        r = self.session.post(urls.order_verification(), data)
+        r = self.session.post(self.urls.order_verification, data)
 
         if r.status_code != 200:
             return [r.text], False
@@ -129,7 +131,7 @@ class Schwab(SessionManager):
             "Timing": "Day Only"
         }
 
-        r = self.session.post(urls.order_confirmation(), data)
+        r = self.session.post(self.urls.order_confirmation, data)
 
         if r.status_code != 200:
             messages.append(r.text)

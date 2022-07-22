@@ -1,0 +1,70 @@
+Rank,Symbol,Company Name,Quant,SA Authors,Wall St.,Market Cap,Div Yield,Valuation,Growth,Profitability,Momentum,EPS Rev.
+1,CPG,Crescent Point Energy Corp.,4.99,4.16,4.23,4.07B,1.56%,A,A+,A-,A-,B
+2,HHS,"Harte Hanks, Inc.",4.99,5.0,5.0,85.93M,-,B+,A-,A,A+,A
+3,ARCH,"Arch Resources, Inc.",4.99,4.0,4.8,2.53B,0.54%,A-,A+,A-,A,A
+4,ASRT,"Assertio Holdings, Inc.",4.98,3.5,4.0,138.57M,-,A-,A+,A+,A+,A+
+5,USAK,"USA Truck, Inc.",4.98,4.0,4.0,265.01M,-,A-,B+,B-,A+,A
+6,BXC,BlueLinx Holdings Inc.,4.98,4.0,5.0,733.04M,-,A+,A-,A+,A+,A-
+7,HDSN,"Hudson Technologies, Inc.",4.98,3.66,4.66,375.89M,-,B+,A,A,A+,A-
+8,ARLP,"Alliance Resource Partners, L.P.",4.97,3.66,5.0,2.62B,4.38%,B-,A,B-,A+,A+
+9,CCRN,"Cross Country Healthcare, Inc.",4.97,4.0,3.85,1.16B,-,B+,A,A,A+,A+
+10,CRK,"Comstock Resources, Inc.",4.97,4.0,3.7,3.16B,-,B-,A-,B,A+,A
+11,SU,Suncor Energy Inc.,4.96,4.0,3.8,43.94B,3.82%,B,B+,A,B+,A-
+12,GRIN,Grindrod Shipping Holdings Ltd.,4.95,4.25,5.0,333.66M,6.76%,A+,B+,A+,A+,A-
+13,PLAB,"Photronics, Inc.",4.95,4.33,5.0,1.38B,-,B+,B+,B,A+,A-
+14,PRPH,"ProPhase Labs, Inc.",4.94,5.0,4.5,162.03M,-,B,B,A,A+,A
+15,SBLK,Star Bulk Carriers Corp.,4.92,3.75,4.5,2.71B,21.21%,A+,A+,A+,A+,B-
+16,ON,ON Semiconductor Corporation,4.92,4.33,4.39,26.58B,-,B-,A-,A,A+,A+
+17,ESEA,Euroseas Ltd.,4.91,4.0,4.66,171.86M,2.12%,A+,A+,A,B,A
+18,HCC,"Warrior Met Coal, Inc.",4.89,4.0,3.57,1.55B,0.73%,B,B,A,A+,A+
+19,BLDR,"Builders FirstSource, Inc.",4.88,4.6,4.61,11.35B,-,A-,A-,A+,A+,A
+20,DQ,Daqo New Energy Corp.,4.88,4.66,4.18,4.80B,-,A+,A+,A,A+,B+
+21,MLI,"Mueller Industries, Inc.",4.88,4.33,4.5,3.59B,1.21%,B+,B-,A+,A+,A
+22,PPC,Pilgrim's Pride Corporation,4.87,4.0,3.87,7.64B,-,B,A+,B-,A+,A+
+23,WIRE,Encore Wire Corporation,4.87,4.5,5.0,2.24B,0.07%,A,B+,A+,A+,A+
+24,AN,"AutoNation, Inc.",4.86,4.33,3.83,6.47B,-,A-,B+,A,A,A+
+25,MHO,"M/I Homes, Inc.",4.86,5.0,4.66,1.29B,-,A+,A,B-,B,A
+26,ACLS,"Axcelis Technologies, Inc.",4.86,4.0,4.83,2.20B,-,B-,B+,A-,A+,A+
+27,AMRK,"A-Mark Precious Metals, Inc.",4.85,4.0,4.66,690.17M,-,A,A,B,A-,A+
+28,GNK,Genco Shipping & Trading Limited,4.85,4.0,4.66,804.58M,8.95%,A+,A,A,A,B
+29,EGLE,Eagle Bulk Shipping Inc.,4.85,4.5,4.66,719.97M,11.51%,A+,A,A+,A+,B-
+30,GOGL,Golden Ocean Group Limited,4.83,3.85,3.66,2.24B,24.64%,A+,B,A+,A+,B-
+31,DGICA,Donegal Group Inc.,4.82,4.0,3.5,513.90M,3.93%,B-,B+,B,A+,A
+32,EPM,Evolution Petroleum Corporation,4.81,5.0,4.0,201.49M,5.74%,B-,A-,B,B-,B+
+33,MERC,Mercer International Inc.,4.81,4.0,4.0,1.02B,1.81%,B,A-,B-,A+,B+
+34,CGBD,Carlyle Secured Lending Inc.,4.81,4.0,4.0,688.10M,10.76%,A,A+,B+,B,B
+35,OLN,Olin Corporation,4.79,4.33,4.26,7.37B,1.65%,B,A+,A,A-,A-
+36,STLD,"Steel Dynamics, Inc.",4.76,4.0,3.6,13.35B,1.70%,B+,B,A+,A,B+
+37,TECK,Teck Resources Limited,4.74,4.0,4.2,14.36B,1.03%,A-,A+,A,B+,B
+38,BBW,"Build-A-Bear Workshop, Inc.",4.73,4.0,5.0,262.39M,-,B,B-,B+,A,A
+39,DAC,Danaos Corporation,4.72,4.62,4.33,1.42B,3.64%,A+,A+,A+,B-,B-
+40,DHI,"D.R. Horton, Inc.",4.71,3.5,4.31,26.34B,1.15%,B,A,A-,B+,A-
+41,WLK,Westlake Corporation,4.7,3.66,3.53,11.86B,1.29%,B+,A,A,B+,A-
+42,WGO,"Winnebago Industries, Inc.",4.69,4.0,4.16,1.88B,1.22%,B,B-,A-,A-,A+
+43,SB,"Safe Bulkers, Inc.",4.68,4.0,3.66,446.48M,1.36%,A+,A-,A+,B+,B-
+44,ASR,"Grupo Aeroportuario del Sureste, S. A. B. de C. V.",4.67,4.0,3.66,5.58B,4.10%,B+,B,A,B+,A
+45,LYB,LyondellBasell Industries N.V.,4.66,4.5,3.5,28.51B,5.26%,B+,B-,A+,B,B+
+46,HUN,Huntsman Corporation,4.65,4.0,4.17,6.10B,2.75%,B-,B,B,B+,A-
+47,HCCI,"Heritage-Crystal Clean, Inc",4.65,4.0,4.16,723.36M,-,B,B,A-,A-,A-
+48,BNTX,BioNTech SE,4.65,3.5,3.73,40.31B,-,A,A+,A+,B+,B
+49,WDC,Western Digital Corporation,4.64,3.5,4.21,15.79B,-,A-,B+,A-,B,B+
+50,UFPI,"UFP Industries, Inc.",4.63,4.0,4.33,4.69B,1.06%,B,B-,A-,B+,A+
+51,KLIC,"Kulicke and Soffa Industries, Inc.",4.63,3.5,3.8,3.00B,1.28%,A-,A,A,B+,A+
+52,WY,Weyerhaeuser Company,4.6,4.0,3.9,26.43B,1.97%,B,B,A+,B+,B-
+53,LUV,Southwest Airlines Co.,4.6,3.8,4.35,24.25B,-,B-,A-,B+,B-,A-
+54,AXS,AXIS Capital Holdings Limited,4.6,4.5,3.75,4.61B,3.17%,B-,B+,B,A-,B
+55,HCKT,"The Hackett Group, Inc.",4.59,4.0,4.33,643.78M,2.06%,B-,A-,A-,A,A
+56,SIMO,Silicon Motion Technology Corporation,4.58,4.25,3.6,3.01B,2.12%,B-,B-,A,A+,B+
+57,MPLN,MultiPlan Corporation,4.58,4.0,3.66,3.33B,-,B-,B+,A,A,A
+58,TPH,"Tri Pointe Homes, Inc.",4.57,4.0,3.62,1.96B,-,A+,B,B,B,B+
+59,EZPW,"EZCORP, Inc.",4.55,4.0,5.0,422.65M,-,B,A+,B-,A+,B-
+60,ONEW,OneWater Marine Inc.,4.54,3.66,4.83,539.10M,-,A-,B-,B-,B-,A
+61,VST,Vistra Corp.,4.53,4.5,4.18,10.09B,2.77%,B,B,B,A+,A-
+62,NFG,National Fuel Gas Company,4.35,4.0,3.5,6.05B,2.78%,B-,A,A-,A,B+
+63,WRK,WestRock Company,4.23,4.0,3.64,10.57B,2.39%,B,B-,B,B,B+
+64,FLEX,Flex Ltd.,4.18,4.0,4.5,7.16B,-,A,B+,B-,B+,B-
+65,STRL,"Sterling Infrastructure, Inc.",4.16,4.0,4.0,705.74M,-,A-,B-,B-,B+,B
+66,QIPT,Quipt Home Medical Corp.,4.04,4.0,4.7,179.88M,-,B-,A,A-,A-,B
+67,COLL,"Collegium Pharmaceutical, Inc.",3.99,4.0,4.0,596.57M,-,B+,A+,A,B+,B
+68,ASIX,AdvanSix Inc.,3.9,4.0,4.33,1.02B,0.69%,B-,B+,B,B+,B
+69,COHU,"Cohu, Inc.",3.83,3.5,4.0,1.43B,-,B+,B,B+,B+,B-

@@ -1,19 +1,22 @@
 import requests
 import pyotp
-from . import urls
 
 from playwright.sync_api import sync_playwright, TimeoutError
 from requests.cookies import cookiejar_from_dict
 from playwright_stealth import stealth_sync
+from helpers.urls import URLs
 
 
 # Constants
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
 VIEWPORT = { 'width': 1920, 'height': 1080 }
+global urls
 
 class SessionManager:
     def __init__(self) -> None:
+        global urls
         self.session = requests.Session()
+        urls = URLs("schwab")
         # self.headless = False
         self.playwright = sync_playwright().start()
         if self.browserType == "firefox":
@@ -59,7 +62,7 @@ class SessionManager:
                 self.page.click("text=Continue")
                 
         self.save_and_close_session()
-        return self.page.url == urls.account_summary()
+        return self.page.url == urls.account_summary
 
     def login(self, username, password, totp_secret=None):
         """ This function will log the user into schwab using Playwright and saving
@@ -110,7 +113,7 @@ class SessionManager:
 
         self.page.wait_for_load_state('networkidle')
 
-        if self.page.url != urls.account_summary():
+        if self.page.url != urls.account_summary:
             # We need further authentication, so we'll send an SMS
             print("Authentication state is not available. We will need to go through two factor authentication.")
             print("You should receive a code through SMS soon")
@@ -126,6 +129,6 @@ class SessionManager:
             return False
 
         # Save our session
-        self.save_and_close_session()
+        self.save_session()
 
         return True

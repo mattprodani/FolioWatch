@@ -1,12 +1,13 @@
 import requests
 from playwright.sync_api import sync_playwright, TimeoutError
 from playwright_stealth import stealth_sync
-
+from helpers.urls import URLs
 
 class SeekingAlpha():
     def __init__(self, **kwargs):
         self.delay = kwargs.get("delay", 0)
         self.session = requests.Session()
+        # self.loginURL = URLs("sa").login
         self.playwright = sync_playwright().start()
         self.browser = self.playwright.webkit.launch(
             headless=kwargs.get("headless", True)
