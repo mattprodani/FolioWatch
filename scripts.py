@@ -38,10 +38,14 @@ def load_sa_data(**kwargs):
     """
         Loads Stock Rankings from SA
     """
-    sa = SeekingAlpha(kwargs)
+    sa = SeekingAlpha(**kwargs)
     sa.login(kwargs.get("SA_user"), kwargs.get("SA_password"))
 
-    html = sa.get_top_stocks()
-    df = parse_top_stocks(html)
-    df.to_csv(f'{DIR}/top_stocks.csv')
+    top_html = sa.get_top_stocks()
+    parse_sa_table(top_html).to_csv(f'{DIR}/top_stocks.csv')
+    
+    folio_html = sa.get_portfolio()
+    parse_sa_table(folio_html).to_csv(f'{DIR}/local.sa_folio.csv')
+
+
 

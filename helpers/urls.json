@@ -8,6 +8,7 @@
         "watchlist_data": "https://client.schwab.com/trade/watchlist/watchlist.aspx?view=analyst_ratings"
     },
     "sa": {
-        "login": "https://seekingalpha.com/account/login"
+        "login": "https://seekingalpha.com/account/login",
+        "portfolio": "https://seekingalpha.com/account/portfolio/"
     }
 }

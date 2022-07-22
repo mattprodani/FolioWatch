@@ -7,7 +7,7 @@ class SeekingAlpha():
     def __init__(self, **kwargs):
         self.delay = kwargs.get("delay", 0)
         self.session = requests.Session()
-        # self.loginURL = URLs("sa").login
+        self.urls = URLs("sa")
         self.playwright = sync_playwright().start()
         self.browser = self.playwright.webkit.launch(
             headless=kwargs.get("headless", True)
@@ -26,7 +26,7 @@ class SeekingAlpha():
             Login to SeekingAlpha
         """
         with self.page.expect_navigation():
-            self.page.goto("https://seekingalpha.com/account/login")
+            self.page.goto(self.urls.login)
         self.page.wait_for_load_state("domcontentloaded")
         # self.page.wait_for_timeout(2000)
         self.delay_nav()
@@ -43,16 +43,14 @@ class SeekingAlpha():
         return True
 
     def get_top_stocks(self):
-        """
-            Returns a dictionary of analyst ratings where the key is the ticker
-        """
 
         self.page.wait_for_timeout(2000)
         self.page.locator('[data-test-id = "top-stocks"]').click()
         self.page.wait_for_load_state("networkidle")
         # self.page.waitForLoadState('networkidle') 
 
-        self.page.locator('[data-test-id = "screener-link"]', has_text = "Top Rated Stocks").click()
+        self.page.locator('[data-test-id = "screener-link"]',
+            has_text = "Top Rated Stocks").click()
 
         self.page.wait_for_timeout(2000)
         self.page.wait_for_load_state("networkidle")
@@ -60,4 +58,19 @@ class SeekingAlpha():
         html = self.page.locator('table').inner_html()
         html = f'<table>{html}</table>'
         return html
+
+    def get_portfolio(self):
+        self.page.wait_for_timeout(2000)
+        with self.page.expect_navigation():
+            self.page.goto(self.urls.portfolio)
+        
+        self.page.wait_for_load_state("networkidle")
+
+        self.page.wait_for_selector("table")
+
+        html = self.page.locator('table').inner_html()
+
+        return f'<table>{html}</table>'
+
+
 

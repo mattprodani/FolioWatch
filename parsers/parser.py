@@ -20,9 +20,11 @@ def parse_analyst_ratings(html: str) -> pd.DataFrame:
 
 
 
-def parse_top_stocks(html: str) -> pd.DataFrame:
+def parse_sa_table(html: str) -> pd.DataFrame:
     parser = BeautifulSoup(html, 'html.parser')
     for s in parser.select('span[data-test-id="top-rated-ticker-company"]'):
         s.clear()
+    for s in parser.select('span[data-test-id="portfolio-ticker-company"]'):
+        s.clear()
     df = pd.read_html(str(parser), index_col= 0)[0]
-    return df
+    return df.dropna(axis=1, how='all')

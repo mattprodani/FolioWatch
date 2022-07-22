@@ -13,7 +13,7 @@ A python-based personal investment manager designed to pull information from var
 
 ## To-Do:
 - [x] Export research to HTML
-- [ ] Portfolio data export
+- [x] Portfolio data export
 - [ ] E-mail package
 - [ ] Automatic trading and rebalancing
 - [ ] Docker container

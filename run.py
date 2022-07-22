@@ -8,7 +8,7 @@ secrets = json.load(open('secret.json'))
 def schwab():
     load_schwab_holdings(**secrets, **config)
 def sa():
-    load_sa_data(config, secrets["SA_user"], secrets["SA_password"])
+    load_sa_data(**secrets, **config)
 
 
 def main():
