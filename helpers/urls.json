@@ -1,0 +1,13 @@
+{
+    "schwab": {
+        "homepage": "https://www.schwab.com/",
+        "account_summary": "https://client.schwab.com/clientapps/accounts/summary/",
+        "positions_data": "https://client.schwab.com/api/PositionV2/PositionsDataV2",
+        "order_verification": "https://client.schwab.com/api/ts/stamp/verifyOrder",
+        "order_confirmation": "https://client.schwab.com/api/ts/stamp/confirmorder",
+        "watchlist_data": "https://client.schwab.com/trade/watchlist/watchlist.aspx"
+    },
+    "sa": {
+        "login": "https://seekingalpha.com/account/login"
+    }
+}

@@ -1,0 +1,7 @@
+pandas
+bs4
+requests
+playwright
+playwright_stealth
+pyotp
+vipaccess
