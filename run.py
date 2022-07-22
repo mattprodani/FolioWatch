@@ -13,10 +13,8 @@ def sa():
 
 def main():
     args = sys.argv[1:]
-    options = "p:"
-    long_options = ["platform="]
     try:
-        args, vals = getopt.getopt(args, options, long_options)
+        args, _ = getopt.getopt(args, "p:", ["platform="])
         for arg, val in args:
             if arg not in ('-p', "--platform"):
                 print("Invalid argument: " + arg)

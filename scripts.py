@@ -7,6 +7,12 @@ import json
 DIR = "compiled_tables"
 
 def load_schwab_holdings(**kwargs):
+    """
+        Logs in to Schwab and saves holdings,
+        and watchlist analyst ratings to csv files.
+        Arguments:
+            **kwargs: config and secret dict
+    """
     api = Schwab()
     logged_in = api.login(
         username=kwargs.get("username"),
@@ -28,9 +34,12 @@ def load_schwab_holdings(**kwargs):
 
     print("Successfully loaded Schwab holdings")
 
-def load_sa_data(config, username, password):
-    sa = SeekingAlpha(**json.loads(open('config.json').read()))
-    sa.login(username, password)
+def load_sa_data(**kwargs):
+    """
+        Loads Stock Rankings from SA
+    """
+    sa = SeekingAlpha(kwargs)
+    sa.login(kwargs.get("SA_user"), kwargs.get("SA_password"))
 
     html = sa.get_top_stocks()
     df = parse_top_stocks(html)
