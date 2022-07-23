@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Template modified from colorlib.co -->
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{ title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="robots" content="noindex, follow">
+</head>
+<body class="vsc-initialized">
+    <div class="header" style="
+        text-align: center;
+        padding: 30px;
+    ">
+    <h1>Portfolio Report</h1>
+    <p>{{ date }}</p>
+    </div>
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100">
+                    <h2 style="
+                        color: white;
+                        margin:3rem;
+                    "> Current Holdings </h2>
+		            {{ piedata }}
+                    {% for table in tables %}
+                        <hr>
+                        <h2 style="
+                            color: white;
+                        "> {{ table["title"] }} </h2>
+                        <table style = "margin-top: 2rem;">
+                            <thead>
+                                <tr class="table100-head">
+                                    {% for item in table["columns"] %}
+                                    <th>{{ item }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in table["rows"] %}
+                                    <tr>
+                                        {% for cell in row %}
+                                        <td>{{ cell }}</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+</body>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+svg {
+    width: 700px !important;
+    height: 500px !important;
+    margin:auto!important;
+    background: #fff !important;
+}
+
+*,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+    margin: 0
+}
+
+input,
+textarea {
+    display: block;
+    outline: 0
+}
+
+a:focus,
+button {
+    outline: 0 !important
+}
+
+iframe,
+input {
+    border: none !important
+}
+
+.limiter,
+table {
+    width: 100%;
+    margin: 0 auto
+}
+
+table,
+table * {
+    position: relative
+}
+
+.table100-head th,
+tbody tr {
+    font-family: 'Open Sans';
+    line-height: 1.2;
+    font-weight: unset
+}
+
+tbody tr:hover,
+tbody tr:nth-child(2n) {
+    background-color: #f5f5f5
+}
+
+button:hover,
+tbody tr:hover {
+    cursor: pointer
+}
+
+.column4,
+.column5,
+.column6,
+table td.l,
+table th.l {
+    text-align: right
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box
+}
+
+hr {
+    color: #fff;
+    border-color: #fff;
+    margin: 5rem 0
+}
+
+body,
+html {
+    height: 100%;
+    text-align: center;
+    font-family: 'Open Sans'
+}
+
+a {
+    transition: .4s;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    -moz-transition: .4s
+}
+
+a:hover {
+    text-decoration: none
+}
+
+li,
+ul {
+    list-style-type: none
+}
+
+input:focus,
+textarea:focus {
+    border-color: transparent !important
+}
+
+button {
+    border: none;
+    background: 0 0
+}
+
+.container-table100 {
+    width: 100%;
+    min-height: 100vh;
+    background: #c850c0;
+    background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
+    background: -o-linear-gradient(45deg, #4158d0, #c850c0);
+    background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
+    background: linear-gradient(45deg, #4158d0, #c850c0);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px
+}
+
+.wrap-table100 {
+    width: 1170px
+}
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+thead {
+    height: 60px;
+    background: #36304a !important
+}
+
+table thead tr {
+    height: 60px;
+    background: #36304a !important
+}
+
+table tbody tr {
+    height: 50px
+}
+
+table tbody tr:last-child {
+    border: 0
+}
+
+table td,
+table th {
+    text-align: center;
+    padding: 2px
+}
+
+table td.c,
+table td.r,
+table th.c,
+table th.r {
+    text-align: center
+}
+
+.table100-head th {
+    font-size: 18px;
+    color: #fff
+}
+
+tbody tr {
+    font-size: 15px;
+    color: grey
+}
+
+@media print{
+    th{
+        background: #000!important ;
+    }
+    thead{
+        color:#000!important;
+        background:#000!important;
+    }
+
+    .piechart {
+        width: 600px !important;
+        height: 500px !important;
+        margin:auto!important;
+        background: #fff !important;
+    }
+
+}
+/* 
+tbody tr:hover {
+    color: #555
+} */
+
+/* 
+@media screen and (max-width:992px) {
+
+    table,
+    table td,
+    table th,
+    table tr,
+    table>* {
+        display: block
+    }
+
+    table tbody tr {
+        height: auto;
+        padding: 37px 0
+    }
+
+    table tbody tr td {
+        padding-left: 40% !important;
+        margin-bottom: 24px
+    }
+
+    table tbody tr td:last-child {
+        margin-bottom: 0
+    }
+
+    table tbody tr td:before {
+        font-family: 'Open Sans';
+        font-size: 14px;
+        color: #999;
+        line-height: 1.2;
+        font-weight: unset;
+        position: absolute;
+        width: 40%;
+        left: 30px;
+        top: 0
+    }
+
+    table tbody tr td:first-child:before {
+        content: "Date"
+    }
+
+    table tbody tr td:nth-child(2):before {
+        content: "Order ID"
+    }
+
+    table tbody tr td:nth-child(3):before {
+        content: "Name"
+    }
+
+    table tbody tr td:nth-child(4):before {
+        content: "Price"
+    }
+
+    table tbody tr td:nth-child(5):before {
+        content: "Quantity"
+    }
+
+    table tbody tr td:nth-child(6):before {
+        content: "Total"
+    }
+
+    .column4,
+    .column5,
+    .column6 {
+        text-align: left
+    }
+
+    .column1,
+    .column2,
+    .column3,
+    .column4,
+    .column5,
+    .column6 {
+        width: 100%
+    }
+
+    tbody tr {
+        font-size: 14px
+    }
+}
+
+@media (max-width:576px) {
+    .container-table100 {
+        padding-left: 15px;
+        padding-right: 15px
+    }
+} */
+</style>
+<style> @page {size: 1920px 4000px;}</style>
+</html>
