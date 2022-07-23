@@ -1,1 +1,2 @@
-special-vendored-path/* linguist-vendored
+special-vendored-path/* template
+special-vendored-path/* reports
