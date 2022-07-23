@@ -3,6 +3,7 @@
 
 ## Description
 A python-based personal investment manager designed to pull information from various sources and provide an update on the portfolio before opening.
+Example PDF report: [REPORT](reports/example_report.pdf)
 </hr >
 
 ## Features
@@ -35,6 +36,7 @@ vipaccess
 plotly
 kaleido
 weasyprint
+jinja2
 ```
 
 
