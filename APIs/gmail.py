@@ -9,7 +9,6 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-import google.auth
 
 
 
@@ -75,12 +74,12 @@ class Gmail():
             create_message = {
                 'raw': encoded_message
             }
-            # pylint: disable=E1101
+
             send_message = (service.users().messages().send
                             (userId="me", body=create_message).execute())
-            print(F'Message Id: {send_message["id"]}')
+            print(F'Message Successfully Sent: {send_message["id"]}')
         except HttpError as error:
-            print(F'An error occurred: {error}')
+            print(F'From Google API: {error}')
             send_message = None
         return send_message
 
