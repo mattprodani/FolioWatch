@@ -16,7 +16,9 @@ STATS_COLS = ['Price', 'Change', 'Change %', 'Volume', 'Avg. Vol', 'Prev Close',
 
 def create_report():
     """
-        Creates a report from the data in the portfolio.
+        Creates both an HTML and PDF report from the data in the portfolio.
+        Args: None. run.py must be run first to load the data into the respective folders.
+        Returns: None
     """
     TODAY = date.today().strftime("%Y-%m-%d")
 
@@ -26,9 +28,8 @@ def create_report():
     schwab_df = pd.read_csv("compiled_tables/analyst_ratings.csv").convert_dtypes()
     sa_df = pd.read_csv("compiled_tables/local.sa_folio.csv", index_col= 0).convert_dtypes()
     schwab_holdings = json.load(open("compiled_tables/local.schwab_holdings.json"))
-    global xy
-    tables = []
 
+    tables = []
     tables.append(create_ratings_table(sa_df, schwab_df))
     tables.append(create_stats_table(sa_df))
     pdf_plot, html_plot = plots_from_holdings(schwab_holdings)
@@ -52,7 +53,9 @@ def create_report():
         f.write(html)
 
     html_2_pdf = env.get_template("template/pdftemplate.jinja").render(var_pdf)
-    HTML(string=html_2_pdf).write_pdf(f"reports/report{TODAY}.pdf", presentational_hints=True)
+    HTML(string=html_2_pdf).write_pdf(f"reports/report_{TODAY}.pdf", presentational_hints=True)
+
+    return f"reports/report_{TODAY}"
     
 def create_stats_table(sa):
     """
@@ -71,21 +74,6 @@ def create_ratings_table(sa, schwab):
     table.columns = [x.replace("Ranking", "").replace("Star", "").replace("Rating", "").strip() for x in table.columns.values]
     return {"title": "Ratings Update", "columns": table.columns, "rows":table.values}
 
-def pie_from_positions(holdings):
-    """
-        Processes positions from Schwab and saves to csv file.
-    """
-    def describe_pos(x):
-        description = ""
-        for key, val in x.items():
-            description += f"{key}: {val}\n"
-        return description
-
-    positions = []
-    for acc, hold in holdings.items():
-        for pos in hold["positions"]:
-            positions.append(pos)
-    return [[x["symbol"], x["market_value"], describe_pos(x)] for x in positions]
 
 def plots_from_holdings(holdings):
     def describe_pos(x):

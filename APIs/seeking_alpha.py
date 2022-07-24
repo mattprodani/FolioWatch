@@ -21,6 +21,12 @@ class SeekingAlpha():
     def delay_nav(self):
         self.page.wait_for_timeout(self.delay)
 
+    
+    def close_session(self):
+        self.page.close()
+        self.browser.close()
+        self.playwright.stop()
+
     def login(self, username, password):
         """
             Login to SeekingAlpha

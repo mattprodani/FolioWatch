@@ -6,6 +6,6 @@
         "width": 1920,
         "height": 1080
     },
-    "delay": 2000
-    
+    "delay": 2000,
+    "email_receiver": "mattp@nyu.edu"
 }

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "FolioWatch"
+version = "0.0.1"
+authors = [
+  { name="Matt Prodani", email="mattp@nyu.edu" },
+]
+description = "A package to create daily portfolio reports"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mattprodani/FolioWatch"

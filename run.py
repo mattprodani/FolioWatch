@@ -1,4 +1,4 @@
-from scripts import *
+from helpers.loaders import *
 import json
 import getopt, sys
 

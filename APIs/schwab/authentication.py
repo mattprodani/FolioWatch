@@ -42,6 +42,11 @@ class SessionManager:
         # self.browser.close()
         # self.playwright.stop()
 
+    def close_session(self):
+        self.page.close()
+        self.browser.close()
+        self.playwright.stop()
+
     def get_session(self):
         return self.session
 
