@@ -4,7 +4,7 @@
 ## Description
 A python-based personal investment manager designed to pull information from various sources and provide an update on the portfolio before opening.
 The full model uses more sources than the basic model in this repo.
-Example PDF report: [REPORT](reports/example_report.pdf)
+Example: [PDF report](reports/example_report.pdf)
 </hr >
 
 ## Features
@@ -22,6 +22,7 @@ Example PDF report: [REPORT](reports/example_report.pdf)
 - [x] Pipeline to connect sourcing data and report
 - [x] E-mail for report
 - [ ] Docker container
+- [ ] Abstraction for report creation
 - [ ] Automatic trading and rebalancing
 
 </hr >
