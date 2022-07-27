@@ -21,6 +21,9 @@ Example: [PDF report](reports/example_report.pdf)
 - [x] PDF and html report creation
 - [x] Pipeline to connect sourcing data and report
 - [x] E-mail for report
+- [x] Yahoo Historicals
+- [ ] Mean Variance Optimization
+- [ ] Efficiency Frontier Optimization
 - [ ] Docker container
 - [ ] Abstraction for report creation
 - [ ] Automatic trading and rebalancing
